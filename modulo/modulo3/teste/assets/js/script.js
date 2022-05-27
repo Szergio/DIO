@@ -1,10 +1,57 @@
-function soma(a,b){
-    var soma = 0;
-    soma = a + b;
-    return soma;
+var numeroWrapper = document.getElementById("numero");
+let numero = 0;
+//var num = 0;
+
+function soma(){
+    numero = numero + 101;
+    if(numero <= 777){
+        numeroWrapper.innerHTML = numero;
+        console.log("Número <= 777, logo número =",numero);
+    }
+    else{
+        numero = 777;
+        numeroWrapper.innerHTML = 777;
+        console.log("Número > 777.(",numero,")");
+    }
+    //menorQmaior(numero);
+    //numeroWrapper.innerHTML = menorQmaior(numero);
 }
-var a,b,result = 0;
-a = 10;
-b = 27;
-result = soma(a,b);
-console.log("O result =",result);
+
+function sub(){
+    numero = numero - 1.1;
+    console.log(numero);
+    //menorQmaior(numero);
+    if(numero >-6){
+        numeroWrapper.innerHTML = numero;
+        console.log("Número atual =",numero);
+    }
+    else{
+        numero = -6
+        numeroWrapper.innerHTML = -6;
+        console.log("Número =",numero);
+    }
+    /*
+    numeroWrapper.innerHTML = menorQmaior(numero);
+    console.log("Número atual =",numero);*/
+}
+
+function zero(){
+    numero = 0;
+    numeroWrapper.innerHTML = 0;
+    console.log("Número redefiniddo para ",numero);
+}
+/*
+function menorQmaior(num){
+    if(num < -6){
+        num = -6;
+        return num;
+    }
+    else if(num > 777){
+        num = 777;
+        return num;
+    }
+    else{
+        return num;
+    }
+    return 0;
+}*/
