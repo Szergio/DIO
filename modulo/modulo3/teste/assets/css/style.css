@@ -3,10 +3,17 @@ body{
     color: black;
     background-color: cornflowerblue;
     text-align: center;
-    size: 200px;
+    font-size: 30px;
+
+
 }
-
-p{
-    size: 300px;
-
+button {
+    background-color:darkslategray;
+    border: 10;
+    color:black;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
