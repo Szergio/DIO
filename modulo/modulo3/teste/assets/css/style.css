@@ -1,4 +1,11 @@
 body{
-    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
     background-color: cornflowerblue;
+    text-align: center;
+}
+
+p{
+    size: 40px;
+
 }
