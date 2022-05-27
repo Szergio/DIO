@@ -3,9 +3,10 @@ body{
     color: black;
     background-color: cornflowerblue;
     text-align: center;
+    size: 200px;
 }
 
 p{
-    size: 40px;
+    size: 300px;
 
 }

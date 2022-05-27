@@ -1,68 +1,68 @@
 var numeroWrapper = document.getElementById("numero");
+var num_anteriorWrapper = document.getElementById("num_anterior");
 let numero = 0;
 let num = 0;
 
+function resultadoanterior(){
+    num_anteriorWrapper.innerHTML = numeroWrapper.innerHTML;
+}
+
+//Acrescenta contador.
 function soma(){
+    resultadoanterior()
     numero = numero + 101;
     numeroWrapper.innerHTML = menorQmaior(numero);
-    console.log(numero);
-
-    /*
-    if(numero <= 777){
-        numeroWrapper.innerHTML = numero;
-        console.log("Número <= 777, logo número =",numero);
-    }
-    else{
-        numero = 777;
-        numeroWrapper.innerHTML = 777;
-        console.log("Número > 777.(",numero,")");
-    }
-    //menorQmaior(numero);
-    //numeroWrapper.innerHTML = menorQmaior(numero);*/
+    console.log("(+)Número =",numero);
+    cor(numero);
 }
 
+//Subtrai contador.
 function sub(){
+    resultadoanterior()
     numero = numero - 1.1;
     numeroWrapper.innerHTML = menorQmaior(numero);
-    console.log(numero);
-    
-    /*
-    //menorQmaior(numero);
-    if(numero >-6){
-        numeroWrapper.innerHTML = numero;
-        console.log("Número atual =",numero);
-    }
-    else{
-        numero = -6
-        numeroWrapper.innerHTML = -6;
-        console.log("Número =",numero);
-    }
-    
-    numeroWrapper.innerHTML = menorQmaior(numero);
-    console.log("Número atual =",numero);*/
+    console.log("(-)Número =",numero);
+    cor(numero);
 }
 
+//Zera o contador.
 function zero(){
+    resultadoanterior()
     numero = 0;
     numeroWrapper.innerHTML = 0;
-    console.log("Número redefiniddo para ",numero);
+    console.log("Número redefiniddo para ",numero,".");
+    document.getElementById("numero").style.color="black";
 }
 
-
-
+//Verifica o contador.
 function menorQmaior(num){
-    if(num < -6){
-        num = -6;
-        numero = -6;
+    let menor,maior=0;
+    menor = -6;
+    maior = 777;
+    if(num < menor){
+        num = menor;
+        numero = menor;
         return num;
     }
-    else if(num > 777){
-        num = 777;
-        numero = 777;
+    else if(num > maior){
+        num = maior;
+        numero = maior;
         return num;
     }
     else{
         return num;
     }
-    //return num;
+}
+
+//Mudança de cor.
+function cor(num){
+    if (num > 0 ){
+        document.getElementById("numero").style.color="blue";
+    }
+    else if(num < 0){
+        document.getElementById("numero").style.color="red";
+    }
+    else{
+        document.getElementById("numero").style.color="black";
+    }
 }
