@@ -1,46 +1,82 @@
-const list = [];
+let listaCheckbox = [];
 
-function lertexto(){
-    let valor = document.getElementById("texto").value;
-    
-    if(valor == ""){
-        console.log("null");
+function readText(){
+    let texto = document.getElementById("texto").value;
+
+    if(texto == "" || verificar(texto) == true){
+        console.log("verificado");
     }
     else{
-        list.push(valor);
-        criar(valor);
-
-        console.log("lista =",list);
-        console.log("O texto registrado =",valor);
-
-        clear();
+        listaCheckbox.push(texto);
+        createCheckbox(texto);
     }
-    
+    clear();
 }
 
-function criar(texto){
-    
-    var t = document.createTextNode(texto);
-
-    var li = document.createElement("LI");
-
-    li.appendChild(t);
-    var teste = document.getElementById("myList").innerHTML;
-    teste += "<input type=checkbox id="+texto+">"+texto+"<br>";
-
-    //document.body.appendChild(li);
-    document.getElementById("myList").innerHTML = teste;
-    
+function verificar(texto){
+    for(var i = 0 ; i<listaCheckbox.length; i++){
+        if(listaCheckbox[i] == texto){
+            console.log("Já tem");
+            return true;
+        }
+    }
+    return false;
 }
-function r(){
-    var del = document.getElementById("ads").id;
-    document.getElementById("ads").remove();
-    console.log("sim");
 
+function createCheckbox(texto){
+    let createBox = document.getElementById("listCheckbox").innerHTML;
+    createBox += 
+    "<tr>"+
+    "<th>"+
+    "<input type=checkbox"+" id="+""+texto+""+" onclick="+"boxCheked()"+">"
+    +"</th>"+
 
+    "<th>"+
+    "<p id="+texto+"1"+">"+texto+"</p>"
+    +"</th>"
+    +"</tr>";
+    
+    document.getElementById("listCheckbox").innerHTML = createBox;
+}
 
+function boxCheked(){
+    for(var i = 0 ; i<listaCheckbox.length; i++){
+        var element = document.getElementById(listaCheckbox[i]);
+        var element1 = document.getElementById(listaCheckbox[i]+"1");
+        if( element.checked == true){
+            element1.style.textDecorationLine = "line-through";
+        }
+        else{
+            element1.style.textDecorationLine = "none";
+        }
+    }
+}
+
+function deleteCheckbox(){
+    console.log(listaCheckbox.length);
+    console.log(listaCheckbox);
+
+    let element  = document.getElementById(listaCheckbox[0]);
+    var lenghtlist = listaCheckbox.length;
+
+    for(var i = 0 ; i <= lenghtlist ; i++){
+        if(document.getElementById(listaCheckbox[i]) == null){
+            break;
+        }
+        element = document.getElementById(listaCheckbox[i]);
+        if(element.checked == true){
+            console.log("Saiu:"+element);
+            document.getElementById(listaCheckbox[i]).remove();
+            document.getElementById(listaCheckbox[i]+"1").remove();
+            listaCheckbox.splice(i, 1);
+            document.getElementById("listCheckbox").deleteRow(i+1);
+            i=-1;
+        }
+    }
 }
 
 function clear(){
     document.getElementById("texto").value = "";
 }
+
+

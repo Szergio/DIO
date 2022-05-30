@@ -8,27 +8,17 @@
     <title>TO DO LIST</title>
 </head>
 <body>
+    <h3>Lista de Tarefas</h3>
     <input type="text" id="texto" name="texto" value="">
-    <input type="submit" onclick="lertexto()">
-    <input type="submit" onclick="r()">
-
-    <br>
+    <input type="submit" onclick="readText()" value="SUBMIT">
+    <input type="submit" onclick="deleteCheckbox()" value="DELETE">
     
-    <ol id="myList">
-        
-    </ol>
-
-   <!--- <input type="checkbox" id="texto"> nome
--->
-            
-        
-    
-    
-    
-
-    
-    
-      
+    <table style="width:100%" sty id="listCheckbox">
+        <tr>
+            <th style="background-color:gray;">Checkbox</th>
+            <th style="background-color:gray;">Tarefa</th>
+        </tr>
+    </table>
 
     <script src="C:\workspace\DIO\modulo\modulo3\lista\assets\js\to-do-list.js"></script>
 </body>
