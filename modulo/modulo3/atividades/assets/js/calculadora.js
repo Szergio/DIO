@@ -27,6 +27,9 @@ function loop(){
                 calculadora();
                 case 2:
                     break;
+                    default:
+                        break
+            
         }
     }
 }
@@ -69,6 +72,8 @@ function escolha(){
                                     break;
                                     case 7:
                                         break;   
+                                        default:
+                                            break
         }
     }
 }

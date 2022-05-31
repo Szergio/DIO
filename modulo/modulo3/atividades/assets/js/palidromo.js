@@ -18,7 +18,6 @@ function palidromo(texto){
             textoConfere = textoConfere.concat(texto[i]);
         }
     }
-  
     for(let i = 0; i < textoOrigin.length ; i++){
         if(textoOrigin[i] != textoConfere[i]){
             //console.log(`${textoOrigin[i]} != ${textoConfere[i]}`);
@@ -57,7 +56,4 @@ function palidromo(texto){
     }
 )("ossso");
 
-let impar = function (){}
-
 palidromo("o s");
-
