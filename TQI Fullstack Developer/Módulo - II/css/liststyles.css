@@ -1,0 +1,13 @@
+.ul{
+/*  list-style-type: url("");*/
+    list-style-type:upper-alpha;
+}
+
+.ol{
+    list-style-type: square;
+}
+
+.li{
+    list-style-type: upper-roman;
+}
+
