@@ -56,7 +56,11 @@ a:hover{
         background-position: 0% 90%;
     }
 }
-
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .checkbox{
     height: 100%px;
@@ -172,4 +176,143 @@ a:hover{
 #toggle:checked ~ .menu-items{
     visibility: visible;
     opacity: 1;
+}
+
+
+/*Cards*/
+
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+
+}
+.card{
+    height: 500px;
+    width: 500px;
+    margin: 2rem 0 0 0;
+    background-image: url('../images/pefil.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(1);
+    color: blue;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-text{
+    width: 40%;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: black;
+}
+.card-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    display: block;
+    border: 1px solid rgb(65, 0, 218);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card-wrapper h3{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.card-wrapper p{
+    font-size: 0;
+    visibility: hidden;
+    /*opacity: 0;*/
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.card:hover{
+    filter: unset;
+}
+
+.card:hover > .card-wrapper::before{
+    height: 300px;
+    width: 400px;
+    opacity: 1;
+}
+
+.card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;  
+}
+
+/*footer*/
+footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+
+@media (max-width: 80px){
+    .social-media{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container{
+        margin-top: 0;
+    }
+
+    .card-container{
+        flex-direction: column;
+    }
+
+    .container .card-container:nth-child(1)
+
+    .card{
+        height: 250px;
+        width: 250px;
+    }
+
+    .card-text{
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .card:hover > .card-wrapper::before{
+        height: 200px;
+        width: 200px;
+    }
 }
