@@ -1,23 +1,45 @@
+/* -->   BODY   <-- */
 body{
-    background: rgb(0, 68, 255);
+    background: rgb(0, 61, 117);
 }
-
-
+/* -->   HEADER   <-- */
 .header{
-    color: rgb(0, 195, 255);
-    background: rgb(255, 255, 255);
+    color: rgb(19, 19, 19);
+    background: rgb(99, 99, 99);
     padding: 2% 2% 2% 2%;
-    border: 10px solid gray;
+    border: 10px solid rgb(19, 19, 19);
     margin: 0.5%;
+    margin-top: 10px;
 }
-
+/* -->   H1/P1   <-- */
 #h1{
     color: black;
     font-size: large;
-    font-style: italic;
+    font-style: normal;
+    text-align: center;
 }
-#h2, #h3{
-    color: gray;
-    font-size: medium;
+#p1{
+    text-align: center;
+}
+/* -->   H2   <-- */
+.h2{
+    color: rgb(0, 0, 0);
+    font-size: small;
     font-style: italic;
+    text-align: right;
+}
+/* -->   H3/P3   <-- */
+#h3{
+    color: #000000;
+    font-size: large;
+    font-style: oblique;
+    text-align: left;
+}
+#p3{
+    text-align: left;
+}
+/* -->   FOOTER   <--*/
+footer{
+    color: rgb(0, 61, 117);
+    background-color: rgb(19, 19, 19);;
 }

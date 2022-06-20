@@ -1,8 +1,10 @@
+/* -->   BODY   <-- */
 body{
     font-family: 'Times New Roman', Times, serif;
     font-size:medium;
+    background-color: rgb(0, 61, 117);
 }
-
+/* -->   CONTAINER   <-- */
 .container{
     width: 100%;
     height: 100hv;
@@ -10,11 +12,11 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+/* -->   CARD   <-- */
 .card{
     height: 500px;
     width: 500px;
-    background-image: url('../images/pefil.png');
+    background-image: url('../images/grey.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,11 +24,11 @@ body{
     justify-content: center;
     align-items: center;
     filter:grayscale(1);
-    color: white;
+    color: rgb(99, 99, 99);
     cursor: pointer;
     transition: 0.3s;
 }
-
+/* -->   CARD-WRAPPER   <-- */
 .card-wrapper{
     text-align: center;
     display: flex;
@@ -35,18 +37,17 @@ body{
     align-items: center;
     position: relative;
 }
-
 .card-wrapper::before{
     content: '';
     position: absolute;
     height: 100px;
     width: 100px;
     display: block;
-    border: 1px solid white;
+    border: 1px solid rgb(99, 99, 99);
     opacity: 0;
     transition: 0.3s;
 }
-
+/* -->   H3/P   <-- */
 .card-wrapper h3{
     font-size: 40px;
     text-transform: uppercase;
@@ -54,7 +55,6 @@ body{
     margin: 0;
     transition: 0.3s;
 }
-
 .card-wrapper p{
     font-size: 0;
     visibility: hidden;
@@ -62,16 +62,15 @@ body{
     text-transform: uppercase;
     transition: 0.3s;    
 }
+/* -->   HOVER   <-- */
 .card:hover{
     filter: unset;
 }
-
 .card:hover > .card-wrapper::before{
     height: 300px;
     width: 400px;
     opacity: 1;
 }
-
 .card:hover >.card-wrapper p{
     opacity: 1;
     visibility: visible;

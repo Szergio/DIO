@@ -1,8 +1,10 @@
+/* -->   BODY   <-- */
 body{
     max-width: 900px;
     margin: auto;
+    text-align: center; 
 }
-
+/* -->   P   <-- */
 p{
    text-align: center; 
 }

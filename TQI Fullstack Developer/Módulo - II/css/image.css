@@ -1,0 +1,15 @@
+/* -->   BODY   <-- */
+body{
+    background-image: url("../images/blue.png");
+}
+/* -->   IMAGE   <-- */
+.img{
+    height: 200px;
+    width: 200px;
+    border: 2px solid rgb(99, 99, 99);
+}
+/* -->   HEADER   <-- */
+header{
+    text-align: center;
+    color:rgb(19, 19, 19);
+}

@@ -1,14 +1,16 @@
+/* -->   BODY   <-- */
 body{
     margin: 0;
     padding: 0;
-    color: rgb(0, 0, 0);
+    color: rgb(14,14,14);
     font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(99,99,99);
 }
-
+/* -->   HEADER   <-- */
 .header-wrapper{
     height: 100vh;
     width: 100%;
-    background: linear-gradient(-45deg, rgb(236, 95, 95), rgb(151, 151, 151), rgb(36, 36, 36),rgb(83, 83, 83));
+    background: linear-gradient(65deg, rgb(14, 14, 14), rgb(80, 80, 80), rgb(160,160,160),rgb(220, 220, 220) );
     background-size: 400% 400%;
     display: flex;
     flex-direction: column;
@@ -17,34 +19,33 @@ body{
     position: relative;
     animation: backgroundTransition 8s ease-in-out infinite;
 }
-
+/* -->   H1/H2   <-- */
 h1,h2{
     text-transform: uppercase;
     letter-spacing: 4px;
 }
-
+/* -->   SOCIAL   <-- */
 .social-media{
     margin-top: 1rem;
     display: flex;
 }
 .social-media a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(14,14,14);
     font-size: 24px;
     padding: 1rem 4rem;
-    border: 1px solid black;
+    border: 1px solid rgb(14,14,14);
     min-width: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97);
 }
-
 a:hover{
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    color: rgb(99,99,99);
+    background-color: rgb(14,14,14);
 }
-
+/* -->   ANIMATION BACKBROUND   <-- */
 @keyframes backgroundTransition {
     0%{
         background-position: 0% 80%;
@@ -56,12 +57,12 @@ a:hover{
         background-position: 0% 90%;
     }
 }
+/* -->   CHECKBOX   <-- */
 .checkbox-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .checkbox{
     height: 100%px;
     width: 100px;
@@ -74,36 +75,30 @@ a:hover{
     z-index: 9999;
     transition: 400ms ease-in-out 0;
 }
-
 .checkbox .trace{
     width: 50px;
     height: 10px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14,14,14);
     position: absolute;
     border-radius: 4px;
     transition: 0.5s ease-in-out;
 }
-
-
 .checkbox .trace:nth-child(1){
     top: 26px;
     transform: rotate(0);
 }
-
 .checkbox .trace:nth-child(2){
     top: 46px;
     transform: rotate(0);
 }
-
 .checkbox .trace:nth-child(3){
     top: 66px;
     transform: rotate(0);
 }
-
 #toggle{
     display: none;
 }
-
+/* -->   MENU   <-- */
 .menu{
     position: absolute;
     top: 28px;
@@ -112,11 +107,10 @@ a:hover{
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgb(14,14,14);
     z-index: -1;
     transition: 400ms ease-in-out 0s;
 }
-
 .menu-items{
     position: fixed;
     top: 0;
@@ -131,56 +125,46 @@ a:hover{
     visibility: hidden;
     transition: 400ms ease-in-out 0s;
 }
-
 .menu-items ul{
     list-style-type: none;
 }
-
 .menu-items ul li a{
     margin: 10px 0;
-    color: black;
+    color: rgb(99,99,99);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 40px;
 }
-
+/* -->   TOGGLE   <-- */
 #toggle:checked + .checkbox .trace:nth-child(1){
     transform: rotate(45deg);
-    background-color: black;
+    background-color: rgb(14,14,14);
     top: 47px;
 }
-
 #toggle:checked + .checkbox .trace:nth-child(2){
     transform: translateX(-100px);
     width: 30px;
     visibility: hidden;
     opacity: 0;
 }
-
 #toggle:checked + .checkbox .trace:nth-child(3){
     transform: rotate(-45deg);
-    background-color: black;
+    background-color: rgb(14,14,14);
     top: 48px;
 }
-
 #toggle:checked + .checkbox{
-    background-color: white;
+    background-color: rgb(99,99,99);
 }
-
 #toggle:checked ~ .menu{
-    box-shadow: 0px 0px 0px 100vmax white;
+    box-shadow: 0px 0px 0px 100vmax rgb(172, 172, 172);
     z-index: 1;
 }
-
 #toggle:checked ~ .menu-items{
     visibility: visible;
     opacity: 1;
 }
-
-
-/*Cards*/
-
+/* -->   CARD   <-- */
 .container{
     width: 100%;
     height: auto;
@@ -190,13 +174,11 @@ a:hover{
     align-items: center;
     margin: 3rem 0;
 }
-
 .card-container{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
-
 }
 .card{
     height: 500px;
@@ -210,16 +192,15 @@ a:hover{
     justify-content: center;
     align-items: center;
     filter: grayscale(1);
-    color: blue;
+    color: rgb(14, 14, 14);
     cursor: pointer;
     transition: 0.3s;
 }
-
 .card-text{
     width: 40%;
     font-family: sans-serif;
     letter-spacing: 1px;
-    color: black;
+    color: rgb(14,14,14);
 }
 .card-wrapper{
     text-align: center;
@@ -229,18 +210,17 @@ a:hover{
     align-items: center;
     position: relative;
 }
-
 .card-wrapper::before{
     content: '';
     position: absolute;
     height: 100px;
     width: 100px;
     display: block;
-    border: 1px solid rgb(65, 0, 218);
+    border: 1px solid rgb(14,14,14);
     opacity: 0;
     transition: 0.3s;
 }
-
+/* -->   H3/P   <-- */
 .card-wrapper h3{
     font-size: 40px;
     text-transform: uppercase;
@@ -248,7 +228,6 @@ a:hover{
     margin: 0;
     transition: 0.3s;
 }
-
 .card-wrapper p{
     font-size: 0;
     visibility: hidden;
@@ -257,60 +236,54 @@ a:hover{
     text-transform: uppercase;
     transition: 0.3s;
 }
-
+/* -->   CARD HOVER   <-- */
 .card:hover{
     filter: unset;
 }
-
 .card:hover > .card-wrapper::before{
     height: 300px;
     width: 400px;
     opacity: 1;
 }
-
 .card:hover > .card-wrapper p {
     opacity: 1;
     visibility: visible;
     font-size: 14px;  
 }
-
-/*footer*/
+/* -->   HEADER   <-- */
 footer{
     height: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    background-color: rgb(14,14,14);
+    color: rgb(99,99,99);
 }
-
+/* -->   SOCIAL   <-- */
 @media (max-width: 80px){
     .social-media{
         display: flex;
         flex-direction: column;
     }
-
+    /* -->   CONTAINER   <-- */
     .container{
         margin-top: 0;
     }
-
     .card-container{
         flex-direction: column;
     }
-
     .container .card-container:nth-child(1)
-
+    /* -->   CARD   <-- */
     .card{
         height: 250px;
         width: 250px;
     }
-
     .card-text{
         width: 90%;
         margin-top: 2rem;
         text-align: center;
     }
-
     .card:hover > .card-wrapper::before{
         height: 200px;
         width: 200px;
